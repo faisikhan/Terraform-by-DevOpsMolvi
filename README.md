@@ -19,7 +19,8 @@ terraform fmt
 
 terraform apply
 
-terraform init -reconfigure
+terraform init --reconfigure  [If you did some changes in main.tf or added any additional file, and you want to reflect those changes]
+
 ==================================================
 
 
