@@ -12,9 +12,13 @@ Credentials will be saved to the following file:
 
 
 terraform init
+
 terraform plan
+
 terraform fmt
+
 terraform apply
+
 terraform init -reconfigure
 
 
