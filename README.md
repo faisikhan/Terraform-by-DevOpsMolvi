@@ -10,6 +10,7 @@ Credentials will be saved to the following file:
 
 /root/.config/gcloud/application_default_credentials.json
 
+**Important Terraform Commands:**
 
 terraform init
 
@@ -22,6 +23,5 @@ terraform apply
 terraform init --reconfigure  [If you did some changes in main.tf or added any additional file, and you want to reflect those changes]
 
 ==================================================
-
 
 **terraform.tfstate** file stores the current state of your infrastructure components, on your local machine.
