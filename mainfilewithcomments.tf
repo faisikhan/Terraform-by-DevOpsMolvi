@@ -9,19 +9,20 @@ terraform {                    # the terraform block starts here.
 
 provider "google" {            # We are using google as our main provider.
   
-  credentials = file("faisal-iam-219c01f14ea2.json")      # We have to create a service account first to provide IAM access for GCP compute resources.
+  credentials = file("faisal-iam-219c01f14ea2.json")      # We have to create a service account first to provide IAM access for GCP compute resources. Copy the 
+                                                          #  contents of that json file because it contains the credentials in the Terraform directory. 
 
-  project = "faisal-iam"
-  region  = "us-central1"
-  zone    = "us-central1-c"
+  project = "faisal-iam"      # Project ID on GCP. The infrastructure will be created in that project. 
+  region  = "us-central1"     # The region in which our infrastructure will be created.
+  zone    = "us-central1-c"   # and so the zone.
 }
 
 
-resource "google_compute_network" "vpc_network" {
+resource "google_compute_network" "vpc_network" {         # It will create a brand new network with subnets in all GCP regions, the name will be network-1.
   name = "network-1"
 }
 
-resource "google_compute_instance" "vm_instance" {
+resource "google_compute_instance" "vm_instance" {        # We are creating our first VM on GCP with machine type, OS, it's name and other necessary information.
   name         = "faisal-gcp-vm"
   machine_type = "f1-micro"
   tags         = ["web", "dev"]
