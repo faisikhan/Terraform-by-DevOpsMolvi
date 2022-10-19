@@ -2,6 +2,8 @@
 
 **Terraform** is an open source infrastructure as a code tool to automatically build your infrastructure. 
 
+Terraform loads all files ending in .tf or .tf.json in the working directory. List of Terraform providers: https://registry.terraform.io/browse/providers
+
 First of all, follow this URL to install Google Cloud SDK: https://cloud.google.com/sdk/docs/install
 
 Login to GCP on your server:
