@@ -7,8 +7,9 @@ terraform {                    # the terraform block starts here.
   }
 }
 
-provider "google" {
-  credentials = file("faisal-iam-219c01f14ea2.json")
+provider "google" {            # We are using google as our main provider.
+  
+  credentials = file("faisal-iam-219c01f14ea2.json")      # We have to create a service account first to provide IAM access for GCP compute resources.
 
   project = "faisal-iam"
   region  = "us-central1"
