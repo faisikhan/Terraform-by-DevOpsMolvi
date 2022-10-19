@@ -8,15 +8,16 @@ terraform {
 }
 
 provider "google" {
-  credentials = file("terraform-354707-906ceebd9ab9.json")
+  credentials = file("faisal-iam-219c01f14ea2.json")
 
-  project = "terraform-354707"
+  project = "faisal-iam"
   region  = "us-central1"
   zone    = "us-central1-c"
 }
 
+
 resource "google_compute_network" "vpc_network" {
-  name = "nava-network"
+  name = "network-1"
 }
 
 resource "google_compute_instance" "vm_instance" {
