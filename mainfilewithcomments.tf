@@ -37,7 +37,6 @@ resource "google_compute_instance" "vm_instance" {        # We are creating our 
       image = "centos-7"
     }
   }
-
   network_interface {
     network = google_compute_network.vpc_network.name
     access_config {
