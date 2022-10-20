@@ -1,11 +1,17 @@
 terraform {                    # the terraform block starts here.
   required_providers {         # the providers can be google, aws, azure, gcp. Full list here: https://registry.terraform.io/browse/providers
     google = {                 # We are using google as our provider here since we are building infrastructure on GCP.
-      source  = "hashicorp/google"      # The source is picked from here: https://registry.terraform.io/providers/hashicorp/google/latest
-      version = "4.41.0"       # current version being used.
+      source  = "hashicorp/google"      # The source is picked actually from here: https://registry.terraform.io/providers/hashicorp/google/latest 
+                                        # hashicorp/google is the shorthand of https://registry.terraform.io/providers/hashicorp/google/latest
+      version = "4.41.0"       # current version being used. It's optional to specifiy the version, but if do not use the version, Terraform will use the latest
+                               # version which may break the stuff.
     }
   }
 }
+
+################
+################ You can say the providers are plugins that Terraform use to build the infrastructure.
+
 
 provider "google" {            # We are using google as our main provider.
   
