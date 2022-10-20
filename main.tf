@@ -26,7 +26,9 @@ resource "google_compute_instance" "vm_instance" {
   tags         = ["web", "dev"]
   boot_disk {
     initialize_params {
-      image = "centos-7"
+      image = "debian-cloud/debian-11"
+      labels = {
+        disk = "disk1"
     }
   }
 
