@@ -1,4 +1,4 @@
-# Terraform
+# Terraform - Infrastructure Provisioning Tool
 
 **Terraform** is an open source infrastructure as a code tool to automatically build your infrastructure. 
 
