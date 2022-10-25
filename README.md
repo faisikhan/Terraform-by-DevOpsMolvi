@@ -38,3 +38,11 @@ terraform init --reconfigure  [If you did some changes in main.tf or added any a
 ==================================================
 
 **terraform.tfstate** file stores the current state of your infrastructure components, on your local machine.
+
+terraform init -upgrade    ==========>   When we upgrade the version of Terraform provider. The error looks similar to the following:
+
+Could not retrieve the list of available versions for provider hashicorp/google: locked provider registry.terraform.io/hashicorp/google 3.90.1 does not match configured version constraint ~> 4.41.0;
+│ must use terraform init -upgrade to allow selection of new versions
+
+I have updated the current version 3.90.1 to the latest available 4.41.0.
+
