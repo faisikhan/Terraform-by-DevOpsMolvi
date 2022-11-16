@@ -46,3 +46,4 @@ Could not retrieve the list of available versions for provider hashicorp/google:
 
 I have updated the current version 3.90.1 to the latest available 4.41.0.
 
+terraform apply -auto-approve    ==========>   It will build the infrastructure without asking "yes".
