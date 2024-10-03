@@ -14,6 +14,27 @@ Credentials will be saved to the following file:
 
 /root/.config/gcloud/application_default_credentials.json
 
+**How to Install Terraform**
+1. Update the system and install the following packages using the below command:
+
+sudo apt-get update && sudo apt-get install -y gnupg software-properties-common curl
+
+2. Add the HashiCorp GPG Key
+
+curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+
+3. Add the offical HashiCorp Repository for Linux
+
+sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+
+4. Update the system after adding the key
+
+sudo apt-get update
+
+5. Install Terraform
+
+`sudo apt-get install terraform`
+
 **Important Terraform Commands:**
 
 terraform init    ==========>   Initializes your working directory for terraform. Your terraform files must be there.
