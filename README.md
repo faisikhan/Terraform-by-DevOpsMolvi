@@ -4,32 +4,22 @@
 
 Terraform loads all files ending in .tf or .tf.json in the working directory. List of Terraform providers: https://registry.terraform.io/browse/providers
 
-First of all, follow this URL to install Google Cloud SDK: https://cloud.google.com/sdk/docs/install
-
-Login to GCP on your server:
-
-gcloud auth application-default login --no-launch-browser
-
-Credentials will be saved to the following file:
-
-/root/.config/gcloud/application_default_credentials.json
-
 **How to Install Terraform**
 1. Update the system and install the following packages using the below command:
 
-sudo apt-get update && sudo apt-get install -y gnupg software-properties-common curl
+`sudo apt-get update && sudo apt-get install -y gnupg software-properties-common curl`
 
 2. Add the HashiCorp GPG Key
 
-curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+`curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -`
 
 3. Add the offical HashiCorp Repository for Linux
 
-sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+`sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"`
 
 4. Update the system after adding the key
 
-sudo apt-get update
+`sudo apt-get update`
 
 5. Install Terraform
 
