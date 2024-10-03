@@ -1,10 +1,10 @@
 provider "google" {
   project = "terraform-354707"
   region  = "europe-west3"
-  version = "3.65.0"
+  version = "6.5.0"
 }
 resource "google_storage_bucket" "state-bucket" {
-  name     = "faisi-s3-hikhor"
+  name     = "devopsbucket1"
   location = "EU"
   versioning {
     enabled = true
@@ -12,8 +12,7 @@ resource "google_storage_bucket" "state-bucket" {
 }
 terraform {
   backend "gcs" {
-    bucket = "faisi-s3-hikhor"
-    prefix = "jul/agaaaan"
+    bucket = "devopsbucket2"
   }
 }
 resource "google_cloud_run_service" "nginx-service" {
