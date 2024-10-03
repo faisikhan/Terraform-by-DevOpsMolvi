@@ -1,7 +1,7 @@
 provider "google" {
   project = "terraform-354707"
   region  = "europe-west3"
-  version = "6.5.0"
+  version = "3.5.0"
 }
 resource "google_storage_bucket" "state-bucket" {
   name     = "devopsbucket1"
