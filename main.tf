@@ -8,9 +8,9 @@ terraform {
 }
 
 provider "google" {
-  credentials = file("faisal-iam-219c01f14ea2.json")
+  credentials = file("name of the credentials file, should be a .json file")
 
-  project = "faisal-iam"
+  project = "change your project ID here"
   region  = "us-central1"
   zone    = "us-central1-c"
 }
@@ -21,7 +21,7 @@ resource "google_compute_network" "vpc_network" {
 }
 
 resource "google_compute_instance" "vm_instance" {
-  name         = "faisal-gcp-vm"
+  name         = "devopsmolvi-gcp-vm"
   machine_type = "f1-micro"
   tags         = ["web", "dev"]
   boot_disk {
