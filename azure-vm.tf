@@ -3,9 +3,9 @@ provider "azurerm" {
 
   # Define your Azure Service Principal credentials here
   subscription_id = "Enter the Subscription ID here"
-  client_id       = ""
-  client_secret   = ""
-  tenant_id       = ""
+  client_id       = "Enter the Client ID here"
+  client_secret   = "Enter the Client Secret here"
+  tenant_id       = "Enter the Tenant ID here"
 }
 
 # Create a resource group
