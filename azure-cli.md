@@ -1,4 +1,4 @@
-# How to Azure CLI? 
+# Azure CLI? 
 
 In this tutorial, we'll:
 1. Install Azure CLI
