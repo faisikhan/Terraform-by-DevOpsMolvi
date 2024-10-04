@@ -1,4 +1,4 @@
-# Azure CLI 
+# How to Azure CLI? 
 
 In this tutorial, we'll:
 1. Install Azure CLI
@@ -38,4 +38,14 @@ Signed-by: /etc/apt/keyrings/microsoft.gpg" | sudo tee /etc/apt/sources.list.d/a
 
 `sudo apt-get update
 sudo apt-get install azure-cli`
+
+6. Login to Azure using the following command:
+
+`az login'
+
+# How to Create a Service Principal for Terraform?
+
+Terraform will need permissions to manage resources in your Azure account. Create a service principal using Azure CLI:
+
+az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/<YOUR_SUBSCRIPTION_ID>"
 
