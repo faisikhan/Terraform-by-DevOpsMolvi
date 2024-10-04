@@ -37,9 +37,9 @@ resource "google_compute_instance" "vm_instance" {        # We are creating our 
       image = "centos-7"
     }
   }
-  network_interface {
-    network = google_compute_network.vpc_network.name
-    access_config {
+  network_interface {         # This specific block of code is part of the configuration for setting up the networking of a GCP instance.
+    network = google_compute_network.vpc_network.name       #This line specifies which VPC network the Compute Engine instance should be attached to.
+    access_config {      #Automatically enables public internet access for the VM by assigning it an ephemeral (temporary) public IP address.
     }
   }
 }
