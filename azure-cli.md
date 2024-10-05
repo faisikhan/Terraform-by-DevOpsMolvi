@@ -19,8 +19,9 @@ We can install Azure CLI using the following steps:
 
 3. Download and install the Microsoft signing key:
 
-  `sudo mkdir -p /etc/apt/keyrings
-  curl -sLS https://packages.microsoft.com/keys/microsoft.asc |
+  `sudo mkdir -p /etc/apt/keyrings`
+  
+  `curl -sLS https://packages.microsoft.com/keys/microsoft.asc |
   gpg --dearmor | sudo tee /etc/apt/keyrings/microsoft.gpg > /dev/null
   sudo chmod go+r /etc/apt/keyrings/microsoft.gpg`
 
@@ -36,8 +37,9 @@ Signed-by: /etc/apt/keyrings/microsoft.gpg" | sudo tee /etc/apt/sources.list.d/a
 
 5. Update repository information and install the azure-cli package:
 
-`sudo apt-get update
-sudo apt-get install azure-cli`
+`sudo apt-get update`
+
+`sudo apt-get install azure-cli`
 
 6. Login to Azure using the following command:
 
