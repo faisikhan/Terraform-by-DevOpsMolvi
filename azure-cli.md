@@ -28,11 +28,17 @@ We can install Azure CLI using the following steps:
 4. Add the Azure CLI software repository:
 
 `AZ_DIST=$(lsb_release -cs)`
+
 `echo "Types: deb`
+
 `URIs: https://packages.microsoft.com/repos/azure-cli/`
+
 `Suites: ${AZ_DIST}`
+
 `Components: main`
+
 `Architectures: $(dpkg --print-architecture)`
+
 `Signed-by: /etc/apt/keyrings/microsoft.gpg" | sudo tee /etc/apt/sources.list.d/azure-cli.sources`
 
 5. Update repository information and install the azure-cli package:
