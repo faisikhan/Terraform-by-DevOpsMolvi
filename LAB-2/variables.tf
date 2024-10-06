@@ -1,0 +1,10 @@
+variable "region" {}
+variable "myproject" {}
+variable "creds" {}
+variable "name" {}
+variable "subnet_cidr" {}
+variable "server" {}
+variable "machinetype" {}
+variable "zone" {}
+variable "gcp_ssh_user" {}
+variable "gcp_ssh_pub_key_file" {}
