@@ -22,5 +22,5 @@ resource "google_storage_bucket" "auto-expire" {
 resource "google_storage_bucket_object" "picture" {
   name = "myimage"
   bucket = "pizzaimages"
-  source = "myimage.png"  
+  source = "pizza.png"  
 }
