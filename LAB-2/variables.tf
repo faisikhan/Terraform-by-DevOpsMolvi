@@ -8,3 +8,6 @@ variable "machinetype" {}
 variable "zone" {}
 variable "gcp_ssh_user" {}
 variable "gcp_ssh_pub_key_file" {}
+variable "bucket_name" {}
+variable "storage_class" {}
+variable "bucket_location" {}
