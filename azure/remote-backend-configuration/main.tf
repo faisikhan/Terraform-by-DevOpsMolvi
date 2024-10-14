@@ -85,3 +85,38 @@ resource "azurerm_linux_virtual_machine" "vm" {
 output "public_ip_address" {
   value = azurerm_public_ip.vm_public_ip.ip_address
 }
+
+####################################################################
+#                 Terraform Remote                                 #
+#               Backend Configuration                              #
+####################################################################
+
+# Create a resource group for backend storage account
+resource "azurerm_resource_group" "backend_rg" {
+  name     = "devopsmolvi-backend-rg"
+  location = "East ASIA"
+}
+
+# Create a Storage Account for Terraform state
+resource "azurerm_storage_account" "sa" {
+  name                     = "devopsmolvistorage" # Must be globally unique
+  resource_group_name      = azurerm_resource_group.backend_rg.name
+  location                 = azurerm_resource_group.backend_rg.location
+  account_tier             = "Standard"
+  account_replication_type = "LRS"
+}
+
+# Create a Blob Container
+resource "azurerm_storage_container" "container" {
+  name                  = "tfstate"
+  storage_account_name  = azurerm_storage_account.sa.name
+  container_access_type = "private"
+}
+terraform {
+  backend "azurerm" {
+    resource_group_name  = "devopsmolvi-backend-rg"
+    storage_account_name = "devopsmolvistorage"
+    container_name       = "tfstate"
+    key                  = "terraform.tfstate"
+  }
+}
