@@ -1,3 +1,9 @@
+#########################################################################
+#                 This is just to get your hands on Terraform           #
+#  You can add more resources and check the state file in Azure for the #
+#            changes everytime we create more resources.                #
+##########################################################################
+
 # Create a Resource Group
 resource "azurerm_resource_group" "rg" {
   name     = "devopsmolvi-resources-rg"
